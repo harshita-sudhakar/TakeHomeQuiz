@@ -1,4 +1,5 @@
+@FunctionalInterface
 public interface Addition
 {
-    int addNumbers(int low, int high);
+    int addNumbers(int lower, int higher);
 }

@@ -1,17 +1,5 @@
 import java.util.*;
 
-class Total implements Addition
-{
-    @Override
-    public int addNumbers(int low, int high) {
-        int sum = 0;
-        for(int i= low; i<=high; i++)
-        {
-            sum +=i;
-        }
-        return sum;
-    }
-}
 public class Main
 {
     public static void main(String [] args)
@@ -23,7 +11,16 @@ public class Main
         System.out.print("Upper Bound: ");
         int upp = reader.nextInt();
 
-        Total add = new Total();
+        Addition add = (int lower, int higher) ->
+        {
+            int sum = 0;
+            for(int i= lower; i<=higher; i++)
+            {
+                sum +=i;
+            }
+            return sum;
+        };
+
         System.out.println("Sum of Numbers Between: " + add.addNumbers(low,upp));
 
 
